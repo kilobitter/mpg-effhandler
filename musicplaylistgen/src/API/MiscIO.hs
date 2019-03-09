@@ -1,9 +1,9 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module MiscIO where
+module API.MiscIO where
 
-import APITypes
+import API.APITypes
     
 getArtistIO :: IO Artist
 getArtistIO = do

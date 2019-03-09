@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module YTAPIHandler where
+module API.YTAPIHandler where
 
 -- AIzaSyBjXUQoe09edP1nkUC55xQLoJrFM3SoAx4 - yt API key
 import           Control.Monad.Trans
@@ -14,7 +14,7 @@ import           Data.ByteString.Char8 (pack)
 import           Network.HTTP.Client
 import           Network.HTTP.Client.TLS
 import           Network.HTTP.Base
-import           APITypes
+import           API.APITypes
 
 ytAPIkey :: String
 ytAPIkey = "AIzaSyBjXUQoe09edP1nkUC55xQLoJrFM3SoAx4"

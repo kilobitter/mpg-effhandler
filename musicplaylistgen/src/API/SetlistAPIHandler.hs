@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module SetlistAPIHandler where
+module API.SetlistAPIHandler where
 
 import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
@@ -16,7 +16,7 @@ import           Network.HTTP.Client.TLS
 import           Network.HTTP.Base
 import           Data.ByteString (ByteString)
 import           Network.HTTP.Types.Header
-import           APITypes
+import           API.APITypes
 
 apiKey :: ByteString
 apiKey = "58eb085d-e1b6-4d6f-a070-f35e860dd4fe"

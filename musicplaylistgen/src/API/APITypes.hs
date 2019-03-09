@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module APITypes where
+module API.APITypes where
 
 
 import           Data.Aeson
@@ -9,7 +9,6 @@ import           Data.Functor.Identity
 import qualified Data.Text as T
 import           GHC.Generics
 import           Data.ByteString.Char8 (pack)
-import           Data.Dates
 import           Data.Time
 import           Data.Time.Format
 import           Data.Maybe
@@ -99,7 +98,7 @@ instance FromJSON YTLink where
       return (YTLink vidName vidId)
 
 -- MB-specific
-data MBArtist = MBArtist {artname :: String, artId :: String}
+data MBArtist = MBArtist {artname :: String, artId :: String} deriving Show
 
 instance FromJSON MBArtist where 
     parseJSON = withObject "MBArtist" $ \o -> do

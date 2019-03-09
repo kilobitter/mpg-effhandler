@@ -8,16 +8,16 @@ import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
 import           Data.Aeson
 import           Data.ByteString (ByteString)
-import           Data.Dates
 import           Data.Functor.Identity
 import qualified Data.Text as T
 import           Data.Time
 import           Data.Time.Format
 import           Data.Maybe
 import           GHC.Generics
-import           SetlistAPIHandler
-import           APITypes
-import           MiscMock
+import           API.SetlistAPIHandler
+import           API.MBAPIHandler
+import           API.APITypes
+import           API.MiscIO
 
 import           Network.HTTP.Client
 import           Network.HTTP.Types.Header
@@ -38,17 +38,17 @@ import           Network.HTTP.Types.Header
 
 -- Common code
 
-artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> f MBArtist) -> (MBArtist -> Limit -> f SLSongList) -> (MBArtist -> SLSongList -> f a) -> f a
+artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> f MBArtist) -> (MBArtist -> Limit -> f SLSongList) -> (Artist -> SLSongList -> f a) -> f a
 artistRequest getArtist getLimit idRequest getPopSongs printPL = do
     artist <- getArtist
     artistID <- idRequest artist
     limit <- getLimit
     result <- getPopSongs artistID limit
-    printPL artistID result
+    printPL artist result
 
 main :: IO ()
-main = putStr (runIdentity (artistRequest getArtistMock getLimitMock requestMock playlistToString))
---main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiRequest (\a b -> lift (printPlaylist a b))))
+--main = putStr (runIdentity (artistRequest getArtistMock getLimitMock requestMock playlistToString))
+main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) mbArtistRequest setListApiRequest (\a b -> lift (printPlaylistSL a b))))
 
 --     print ("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks" ++ 
 --         "&artist=" ++ artist ++
