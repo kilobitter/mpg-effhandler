@@ -1,0 +1,3093 @@
+{
+    "type": "setlists",
+    "itemsPerPage": 20,
+    "page": 1,
+    "total": 1171,
+    "setlist": [
+      {
+        "id": "5b925398",
+        "versionId": "4312d35b",
+        "eventDate": "23-03-2019",
+        "lastUpdated": "2019-03-21T00:00:44.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "53d2239d",
+          "name": "Park Theater at Park MGM",
+          "city": {
+            "id": "5506956",
+            "name": "Las Vegas",
+            "state": "Nevada",
+            "stateCode": "NV",
+            "coords": {
+              "lat": 36.1749705,
+              "long": -115.137223
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+        },
+        "tour": {
+          "name": "Classic Cher"
+        },
+        "sets": {
+          "set": []
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-5b925398.html"
+      },
+      {
+        "id": "53925be1",
+        "versionId": "5312ef81",
+        "eventDate": "22-03-2019",
+        "lastUpdated": "2019-03-20T00:35:41.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "53d2239d",
+          "name": "Park Theater at Park MGM",
+          "city": {
+            "id": "5506956",
+            "name": "Las Vegas",
+            "state": "Nevada",
+            "stateCode": "NV",
+            "coords": {
+              "lat": 36.1749705,
+              "long": -115.137223
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+        },
+        "tour": {
+          "name": "Classic Cher"
+        },
+        "sets": {
+          "set": []
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-53925be1.html"
+      },
+      {
+        "id": "7b92626c",
+        "versionId": "5b128748",
+        "eventDate": "20-03-2019",
+        "lastUpdated": "2019-03-19T00:05:13.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "53d2239d",
+          "name": "Park Theater at Park MGM",
+          "city": {
+            "id": "5506956",
+            "name": "Las Vegas",
+            "state": "Nevada",
+            "stateCode": "NV",
+            "coords": {
+              "lat": 36.1749705,
+              "long": -115.137223
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+        },
+        "tour": {
+          "name": "Classic Cher"
+        },
+        "sets": {
+          "set": []
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-7b92626c.html"
+      },
+      {
+        "id": "1b920510",
+        "versionId": "331574f5",
+        "eventDate": "16-03-2019",
+        "lastUpdated": "2019-03-14T00:08:31.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "53d2239d",
+          "name": "Park Theater at Park MGM",
+          "city": {
+            "id": "5506956",
+            "name": "Las Vegas",
+            "state": "Nevada",
+            "stateCode": "NV",
+            "coords": {
+              "lat": 36.1749705,
+              "long": -115.137223
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+        },
+        "tour": {
+          "name": "Classic Cher"
+        },
+        "sets": {
+          "set": []
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-1b920510.html"
+      },
+      {
+        "id": "3920dd7",
+        "versionId": "331514f1",
+        "eventDate": "15-03-2019",
+        "lastUpdated": "2019-03-13T01:08:48.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "53d2239d",
+          "name": "Park Theater at Park MGM",
+          "city": {
+            "id": "5506956",
+            "name": "Las Vegas",
+            "state": "Nevada",
+            "stateCode": "NV",
+            "coords": {
+              "lat": 36.1749705,
+              "long": -115.137223
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+        },
+        "tour": {
+          "name": "Classic Cher"
+        },
+        "sets": {
+          "set": []
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-3920dd7.html"
+      },
+      {
+        "id": "3b921c74",
+        "versionId": "1b1561f0",
+        "eventDate": "13-03-2019",
+        "lastUpdated": "2019-03-14T21:56:13.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "53d2239d",
+          "name": "Park Theater at Park MGM",
+          "city": {
+            "id": "5506956",
+            "name": "Las Vegas",
+            "state": "Nevada",
+            "stateCode": "NV",
+            "coords": {
+              "lat": 36.1749705,
+              "long": -115.137223
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+        },
+        "tour": {
+          "name": "Classic Cher"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Guitar Solo - Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-3b921c74.html"
+      },
+      {
+        "id": "63957a5f",
+        "versionId": "4b14afb2",
+        "eventDate": "14-02-2019",
+        "lastUpdated": "2019-03-20T15:45:00.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "3bd7c0c4",
+          "name": "Bankers Life Fieldhouse",
+          "city": {
+            "id": "4259418",
+            "name": "Indianapolis",
+            "state": "Indiana",
+            "stateCode": "IN",
+            "coords": {
+              "lat": 39.7683765,
+              "long": -86.1580423
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/bankers-life-fieldhouse-indianapolis-in-usa-3bd7c0c4.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "info": "with guitar solo intro"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/bankers-life-fieldhouse-indianapolis-in-63957a5f.html"
+      },
+      {
+        "id": "1b9509fc",
+        "versionId": "1b164144",
+        "eventDate": "12-02-2019",
+        "lastUpdated": "2019-02-13T18:21:05.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "13d55569",
+          "name": "Little Caesars Arena",
+          "city": {
+            "id": "4990729",
+            "name": "Detroit",
+            "state": "Michigan",
+            "stateCode": "MI",
+            "coords": {
+              "lat": 42.331427,
+              "long": -83.0457538
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/little-caesars-arena-detroit-mi-usa-13d55569.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough",
+                  "info": "followed by monologue"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  },
+                  "info": "duet with Sonny"
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "info": "Aerialists during Costume Change"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "info": "Guitar Solo during Costume Change"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time",
+                  "info": "followed by Dancers Interlude for Encore"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/little-caesars-arena-detroit-mi-1b9509fc.html"
+      },
+      {
+        "id": "6b951e0a",
+        "versionId": "6b17bede",
+        "eventDate": "10-02-2019",
+        "lastUpdated": "2019-02-13T22:33:47.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "1bd63994",
+          "name": "Nationwide Arena",
+          "city": {
+            "id": "4509177",
+            "name": "Columbus",
+            "state": "Ohio",
+            "stateCode": "OH",
+            "coords": {
+              "lat": 39.9611755,
+              "long": -82.9987942
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/nationwide-arena-columbus-oh-usa-1bd63994.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra",
+                  "tape": true
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen The Last Of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie To Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 2,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/nationwide-arena-columbus-oh-6b951e0a.html"
+      },
+      {
+        "id": "73952e15",
+        "versionId": "5316572d",
+        "eventDate": "08-02-2019",
+        "lastUpdated": "2019-02-12T18:09:38.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "43d2870b",
+          "name": "United Center",
+          "city": {
+            "id": "4887398",
+            "name": "Chicago",
+            "state": "Illinois",
+            "stateCode": "IL",
+            "coords": {
+              "lat": 41.850033,
+              "long": -87.6500523
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/united-center-chicago-il-usa-43d2870b.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "name": "Act 1:",
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra",
+                  "tape": true
+                },
+                {
+                  "name": "All or Nothing"
+                }
+              ]
+            },
+            {
+              "name": "Act 2:",
+              "song": [
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 3:",
+              "song": [
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 4:",
+              "song": [
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 5:",
+              "song": [
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "name": "Act 5:",
+              "song": [
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 2,
+              "name": "Act 5:",
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/united-center-chicago-il-73952e15.html"
+      },
+      {
+        "id": "4b953fee",
+        "versionId": "7317ba2d",
+        "eventDate": "06-02-2019",
+        "lastUpdated": "2019-02-14T04:07:44.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "43d63b27",
+          "name": "Quicken Loans Arena",
+          "city": {
+            "id": "5150529",
+            "name": "Cleveland",
+            "state": "Ohio",
+            "stateCode": "OH",
+            "coords": {
+              "lat": 41.4994954,
+              "long": -81.6954088
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/quicken-loans-arena-cleveland-oh-usa-43d63b27.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "name": "Act 1",
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra",
+                  "tape": true
+                },
+                {
+                  "name": "All or Nothing"
+                }
+              ]
+            },
+            {
+              "name": "Act 2",
+              "song": [
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 3",
+              "song": [
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 4",
+              "song": [
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "If I Could Turn Back Time"
+                },
+                {
+                  "name": "",
+                  "tape": true
+                }
+              ]
+            },
+            {
+              "encore": 2,
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/quicken-loans-arena-cleveland-oh-4b953fee.html"
+      },
+      {
+        "id": "3b95cca0",
+        "versionId": "7b16d664",
+        "eventDate": "04-02-2019",
+        "lastUpdated": "2019-02-06T19:18:55.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "13d7b9c5",
+          "name": "KFC Yum! Center",
+          "city": {
+            "id": "4299276",
+            "name": "Louisville",
+            "state": "Kentucky",
+            "stateCode": "KY",
+            "coords": {
+              "lat": 38.2542376,
+              "long": -85.759407
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/kfc-yum-center-louisville-ky-usa-13d7b9c5.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "name": "Act 1",
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra",
+                  "tape": true
+                },
+                {
+                  "name": "All or Nothing"
+                }
+              ]
+            },
+            {
+              "name": "Act 2",
+              "song": [
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 3",
+              "song": [
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 4",
+              "song": [
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                },
+                {
+                  "name": "",
+                  "tape": true
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/kfc-yum-center-louisville-ky-3b95cca0.html"
+      },
+      {
+        "id": "1395dda9",
+        "versionId": "7b16d660",
+        "eventDate": "02-02-2019",
+        "lastUpdated": "2019-02-06T19:18:07.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "3d6c1eb",
+          "name": "Mississippi Coast Coliseum",
+          "city": {
+            "id": "4418478",
+            "name": "Biloxi",
+            "state": "Mississippi",
+            "stateCode": "MS",
+            "coords": {
+              "lat": 30.3960318,
+              "long": -88.8853078
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/mississippi-coast-coliseum-biloxi-ms-usa-3d6c1eb.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "name": "Act 1",
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra",
+                  "tape": true
+                },
+                {
+                  "name": "All or Nothing"
+                }
+              ]
+            },
+            {
+              "name": "Act 2",
+              "song": [
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 3",
+              "song": [
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 4",
+              "song": [
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true,
+                  "info": "Costume Change"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                },
+                {
+                  "name": "",
+                  "tape": true
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "name": "Act 5",
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/mississippi-coast-coliseum-biloxi-ms-1395dda9.html"
+      },
+      {
+        "id": "7b95f2b8",
+        "versionId": "6b17bed6",
+        "eventDate": "31-01-2019",
+        "lastUpdated": "2019-02-13T22:36:03.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "23d6746f",
+          "name": "Bridgestone Arena",
+          "city": {
+            "id": "4644585",
+            "name": "Nashville",
+            "state": "Tennessee",
+            "stateCode": "TN",
+            "coords": {
+              "lat": 36.1658899,
+              "long": -86.7844432
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/bridgestone-arena-nashville-tn-usa-23d6746f.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough",
+                  "info": "followed by monologue"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  },
+                  "info": "duet with Sonny"
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "info": "Aerialists during Costume Change"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Cher Movie Montage",
+                  "tape": true
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "info": "Guitar Solo during Costume Change"
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time",
+                  "info": "followed by Dancers Interlude for Encore"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/bridgestone-arena-nashville-tn-7b95f2b8.html"
+      },
+      {
+        "id": "239580ff",
+        "versionId": "4b694356",
+        "eventDate": "29-01-2019",
+        "lastUpdated": "2019-02-01T21:04:01.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "23d514af",
+          "name": "Spectrum Center",
+          "city": {
+            "id": "4460243",
+            "name": "Charlotte",
+            "state": "North Carolina",
+            "stateCode": "NC",
+            "coords": {
+              "lat": 35.2270869,
+              "long": -80.8431268
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/spectrum-center-charlotte-nc-usa-23d514af.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/spectrum-center-charlotte-nc-239580ff.html"
+      },
+      {
+        "id": "23958cc7",
+        "versionId": "2b697402",
+        "eventDate": "27-01-2019",
+        "lastUpdated": "2019-01-30T06:07:08.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "4bd7370a",
+          "name": "PNC Arena",
+          "city": {
+            "id": "4487042",
+            "name": "Raleigh",
+            "state": "North Carolina",
+            "stateCode": "NC",
+            "coords": {
+              "lat": 35.772096,
+              "long": -78.6386145
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/pnc-arena-raleigh-nc-usa-4bd7370a.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie to Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/pnc-arena-raleigh-nc-23958cc7.html"
+      },
+      {
+        "id": "3959d8b",
+        "versionId": "5b69cbc0",
+        "eventDate": "25-01-2019",
+        "lastUpdated": "2019-01-26T20:28:05.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "4bd5e7ae",
+          "name": "Infinite Energy Arena",
+          "city": {
+            "id": "4192289",
+            "name": "Duluth",
+            "state": "Georgia",
+            "stateCode": "GA",
+            "coords": {
+              "lat": 34.0028787,
+              "long": -84.1446376
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/infinite-energy-arena-duluth-ga-usa-4bd5e7ae.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie To Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/infinite-energy-arena-duluth-ga-3959d8b.html"
+      },
+      {
+        "id": "2b95ac2a",
+        "versionId": "3b69f04c",
+        "eventDate": "23-01-2019",
+        "lastUpdated": "2019-01-24T15:09:29.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "43d5d353",
+          "name": "Jacksonville Veterans Memorial Arena",
+          "city": {
+            "id": "4160021",
+            "name": "Jacksonville",
+            "state": "Florida",
+            "stateCode": "FL",
+            "coords": {
+              "lat": 30.3321838,
+              "long": -81.655651
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/jacksonville-veterans-memorial-arena-jacksonville-fl-usa-43d5d353.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie To Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/jacksonville-veterans-memorial-arena-jacksonville-fl-2b95ac2a.html"
+      },
+      {
+        "id": "1b95b9ec",
+        "versionId": "1b17b15c",
+        "eventDate": "21-01-2019",
+        "lastUpdated": "2019-02-14T12:02:48.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "63d79ed7",
+          "name": "Amway Center",
+          "city": {
+            "id": "4167147",
+            "name": "Orlando",
+            "state": "Florida",
+            "stateCode": "FL",
+            "coords": {
+              "lat": 28.5383355,
+              "long": -81.3792365
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/amway-center-orlando-fl-usa-63d79ed7.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "Little Man / All I Ever Need is You",
+                  "tape": true
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "You Haven't Seen the Last of Me",
+                  "tape": true
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Lie To Me",
+                  "tape": true
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Heartbreak Hotel",
+                  "tape": true,
+                  "cover": {
+                    "mbid": "01809552-4f87-45b0-afff-2c6f0730a3be",
+                    "tmid": 821272,
+                    "name": "Elvis Presley",
+                    "sortName": "Presley, Elvis",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/elvis-presley-73d6a2b1.html"
+                  }
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "Bang Bang (My Baby Shot Me Down)",
+                  "tape": true
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/amway-center-orlando-fl-1b95b9ec.html"
+      },
+      {
+        "id": "4b944b96",
+        "versionId": "7b69bad0",
+        "eventDate": "19-01-2019",
+        "lastUpdated": "2019-01-20T22:07:11.000+0000",
+        "artist": {
+          "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+          "tmid": 734742,
+          "name": "Cher",
+          "sortName": "Cher",
+          "disambiguation": "",
+          "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+        },
+        "venue": {
+          "id": "6bd772fe",
+          "name": "BB&T Center",
+          "city": {
+            "id": "4174403",
+            "name": "Sunrise",
+            "state": "Florida",
+            "stateCode": "FL",
+            "coords": {
+              "lat": 27.2594935,
+              "long": -82.4428733
+            },
+            "country": {
+              "code": "US",
+              "name": "United States"
+            }
+          },
+          "url": "https://www.setlist.fm/venue/bbandt-center-sunrise-fl-usa-6bd772fe.html"
+        },
+        "tour": {
+          "name": "Here We Go Again"
+        },
+        "sets": {
+          "set": [
+            {
+              "song": [
+                {
+                  "name": "Woman's World"
+                },
+                {
+                  "name": "Strong Enough"
+                },
+                {
+                  "name": "Gayatri Mantra"
+                },
+                {
+                  "name": "All or Nothing"
+                },
+                {
+                  "name": "The Beat Goes On",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "I Got You Babe",
+                  "cover": {
+                    "mbid": "3d6e4b6d-2700-458c-9722-9021965a8164",
+                    "name": "Sonny & Cher",
+                    "sortName": "Sonny & Cher",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/sonny-and-cher-bd6099a.html"
+                  }
+                },
+                {
+                  "name": "Welcome to Burlesque"
+                },
+                {
+                  "name": "Waterloo",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "SOS",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "Fernando",
+                  "cover": {
+                    "mbid": "d87e52c5-bb8d-4da8-b941-9f4928627dc8",
+                    "name": "ABBA",
+                    "sortName": "ABBA",
+                    "disambiguation": "Swedish pop group",
+                    "url": "https://www.setlist.fm/setlists/abba-7bd6be74.html"
+                  }
+                },
+                {
+                  "name": "After All"
+                },
+                {
+                  "name": "Walking in Memphis",
+                  "cover": {
+                    "mbid": "ddf18377-0bf5-4972-90d2-7de878b5eec4",
+                    "tmid": 734787,
+                    "name": "Marc Cohn",
+                    "sortName": "Cohn, Marc",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/marc-cohn-43d7afb7.html"
+                  }
+                },
+                {
+                  "name": "The Shoop Shoop Song (It's in His Kiss)",
+                  "cover": {
+                    "mbid": "beab6f53-4534-49d9-87a2-d01c0211b366",
+                    "name": "Betty Everett",
+                    "sortName": "Everett, Betty",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/betty-everett-53d7b3c9.html"
+                  }
+                },
+                {
+                  "name": "I Found Someone",
+                  "cover": {
+                    "mbid": "917976a6-75b1-46af-b57b-71f13de20422",
+                    "name": "Laura Branigan",
+                    "sortName": "Branigan, Laura",
+                    "disambiguation": "",
+                    "url": "https://www.setlist.fm/setlists/laura-branigan-bd6b936.html"
+                  }
+                },
+                {
+                  "name": "If I Could Turn Back Time"
+                }
+              ]
+            },
+            {
+              "encore": 1,
+              "song": [
+                {
+                  "name": "Believe"
+                }
+              ]
+            }
+          ]
+        },
+        "url": "https://www.setlist.fm/setlist/cher/2019/bbandt-center-sunrise-fl-4b944b96.html"
+      }
+    ]
+  }

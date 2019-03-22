@@ -1,0 +1,88 @@
+{
+  "type": "setlists",
+  "itemsPerPage": 20,
+  "page": 1,
+  "total": 1171,
+  "setlist": [
+    {
+      "id": "5b925398",
+      "versionId": "4312d35b",
+      "eventDate": "23-03-2019",
+      "lastUpdated": "2019-03-21T00:00:44.000+0000",
+      "artist": {
+        "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+        "tmid": 734742,
+        "name": "Cher",
+        "sortName": "Cher",
+        "disambiguation": "",
+        "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+      },
+      "venue": {
+        "id": "53d2239d",
+        "name": "Park Theater at Park MGM",
+        "city": {
+          "id": "5506956",
+          "name": "Las Vegas",
+          "state": "Nevada",
+          "stateCode": "NV",
+          "coords": {
+            "lat": 36.1749705,
+            "long": -115.137223
+          },
+          "country": {
+            "code": "US",
+            "name": "United States"
+          }
+        },
+        "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+      },
+      "tour": {
+        "name": "Classic Cher"
+      },
+      "sets": {
+        "set": []
+      },
+      "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-5b925398.html"
+    },
+    {
+      "id": "53925be1",
+      "versionId": "5312ef81",
+      "eventDate": "22-03-2019",
+      "lastUpdated": "2019-03-20T00:35:41.000+0000",
+      "artist": {
+        "mbid": "bfcc6d75-a6a5-4bc6-8282-47aec8531818",
+        "tmid": 734742,
+        "name": "Cher",
+        "sortName": "Cher",
+        "disambiguation": "",
+        "url": "https://www.setlist.fm/setlists/cher-73d6bef1.html"
+      },
+      "venue": {
+        "id": "53d2239d",
+        "name": "Park Theater at Park MGM",
+        "city": {
+          "id": "5506956",
+          "name": "Las Vegas",
+          "state": "Nevada",
+          "stateCode": "NV",
+          "coords": {
+            "lat": 36.1749705,
+            "long": -115.137223
+          },
+          "country": {
+            "code": "US",
+            "name": "United States"
+          }
+        },
+        "url": "https://www.setlist.fm/venue/park-theater-at-park-mgm-las-vegas-nv-usa-53d2239d.html"
+      },
+      "tour": {
+        "name": "Classic Cher"
+      },
+      "sets": {
+        "set": []
+      },
+      "url": "https://www.setlist.fm/setlist/cher/2019/park-theater-at-park-mgm-las-vegas-nv-53925be1.html"
+    }
+  ]
+}

@@ -24,11 +24,13 @@ apiHeader :: HeaderName
 apiHeader = "x-api-key"
 
 
+settings :: ManagerSettings
+settings =  managerSetProxy
+                (proxyEnvironment Nothing)
+                tlsManagerSettings
+
 setListApiRequest :: MBArtist -> Limit -> MaybeT IO SLSongList
 setListApiRequest mbartist limit = do
-  let settings = managerSetProxy
-            (proxyEnvironment Nothing)
-            defaultManagerSettings
   man <- lift (newManager settings)
   reqURL <- parseRequest ("https://api.setlist.fm/rest/1.0/artist/" ++
                             artId mbartist ++ "/setlists")
@@ -39,3 +41,18 @@ setListApiRequest mbartist limit = do
             }
   response <- lift (httpLbs req man)
   MaybeT (return (decode (responseBody response) :: Maybe SLSongList))
+
+
+  
+setListApiRequestTest mbartist limit = do
+  man <- newManager settings
+  reqURL <- parseRequest ("https://api.setlist.fm/rest/1.0/artist/" ++
+                            artId mbartist ++ "/setlists")
+  let req = reqURL
+            -- Note that the following settings will be completely ignored.
+            { proxy = Just $ Proxy "localhost" 1234,
+              requestHeaders = [(apiHeader, apiKey),(hAccept,"application/json")]
+            }
+  response <- httpLbs req man
+  print response
+  return (eitherDecode (responseBody response) :: Either String SLSongList)
