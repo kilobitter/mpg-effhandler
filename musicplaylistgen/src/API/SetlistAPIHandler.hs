@@ -6,6 +6,7 @@ module API.SetlistAPIHandler where
 import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
 import           Data.Aeson
+import           Data.Aeson.Types
 import           Data.Functor.Identity
 import qualified Data.Text as T
 import           GHC.Generics
@@ -43,16 +44,21 @@ setListApiRequest mbartist limit = do
   MaybeT (return (decode (responseBody response) :: Maybe SLSongList))
 
 
-  
+
+setListApiRequestTest :: IO (Either String SetListList)
 setListApiRequestTest mbartist limit = do
   man <- newManager settings
   reqURL <- parseRequest ("https://api.setlist.fm/rest/1.0/artist/" ++
                             artId mbartist ++ "/setlists")
   let req = reqURL
-            -- Note that the following settings will be completely ignored.
             { proxy = Just $ Proxy "localhost" 1234,
               requestHeaders = [(apiHeader, apiKey),(hAccept,"application/json")]
             }
   response <- httpLbs req man
-  print response
-  return (eitherDecode (responseBody response) :: Either String SLSongList)
+  return (eitherDecode (responseBody response) :: Either String SetListList)
+
+verboseParser :: Value -> Parser (Either String SetListList)
+verboseParser v = 
+  case parseEither parseJSON v of
+    Left err -> return . Left $ err ++ " -- Invalid object is: " ++ show v
+    Right parsed -> return $ Right parsed

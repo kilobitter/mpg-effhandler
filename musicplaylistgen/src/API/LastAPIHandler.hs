@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module LastAPIHandler where
+module API.LastAPIHandler where
 
 -- 835789484db9bf9715aa1fd908be19f9 - API key
 import           Control.Monad.Trans
@@ -15,7 +15,7 @@ import           Data.ByteString.Char8 (pack)
 import           Network.HTTP.Client
 import           Network.HTTP.Client.TLS
 import           Network.HTTP.Base
-import           APITypes
+import           API.APITypes
 
 apiKey :: String
 apiKey = "835789484db9bf9715aa1fd908be19f9"
@@ -37,8 +37,7 @@ lastFmApiTopRequest artist limit = do
                            "&limit=" ++ limit ++
                            "&format=json")
   let req = reqURL
-            -- Note that the following settings will be completely ignored.
-            { proxy = Just $ Proxy "localhost" 1235
+            { proxy = Just $ Proxy "localhost" 1234
             }
   response <- lift (httpLbs req man)
   MaybeT (return (decode (responseBody response) :: Maybe SongList))

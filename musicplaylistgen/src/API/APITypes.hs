@@ -60,13 +60,13 @@ instance FromJSON CSongPlays where
 
     
 -- Setlist-specific
-newtype SetListList = SetListList {sllist :: [SetList] }
-data SetList = SetList {setartist :: String, setDate :: Day, setlist :: [Song]}
+newtype SetListList = SetListList {sllist :: [SetList] } deriving Show
+data SetList = SetList {setartist :: String, setDate :: Day, setlist :: [Song]} deriving Show
 newtype Song = Song {songname :: String} deriving Show
 type SLSongList = [Song]
 
 instance FromJSON SetListList where
-  parseJSON = withObject "SetList" $ \o -> do
+  parseJSON = withObject "SetListList" $ \o -> do
           slists <- o .: "setlist"
           return $ SetListList slists
 
@@ -77,12 +77,13 @@ instance FromJSON SetList where
           saname <- artistO .: "name"
           setO <- o .: "sets"
           setlist <- setO .: "set"
-          let parsedDate = parseTimeM True defaultTimeLocale "%m-%d-%Y" sDate :: Maybe Day
+          let parsedDate = parseTimeM True defaultTimeLocale "%d-%m-%Y" sDate :: Maybe Day
           return $ SetList saname (fromJust parsedDate) setlist
 
 instance FromJSON Song where
   parseJSON = withObject "Song" $ \o -> do
-          sname <- o .: "name"
+          [song] <- o .: "song"
+          sname <- o .:? "name" .!= "--empty--"
           return $ Song sname
 
 -- YT-specific
