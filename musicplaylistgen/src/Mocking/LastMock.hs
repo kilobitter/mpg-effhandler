@@ -1,14 +1,14 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module LastMock where
+module Mocking.LastMock where
 
-import APITypes
+import API.APITypes
 import Data.Functor.Identity
 
-requestMockS :: Artist -> Limit -> Identity SongList
+requestMockS :: Artist -> Limit -> Identity (Maybe SongList)
 requestMockS art lim
-    | art == "Bones" && lim == "3" = Identity (SongList [SongPlays "Dirt" 25, SongPlays "hdmi"  18, SongPlays "Corduroy" 7])
+    | art == "Bones" && lim == "3" = Identity (Just $ SongList [SongPlays "Dirt" 25, SongPlays "hdmi"  18, SongPlays "Corduroy" 7])
     | otherwise = error "Called with wrong arguments"
 
 requestMockC :: Country -> Limit -> Identity CSongList

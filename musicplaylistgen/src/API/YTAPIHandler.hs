@@ -15,6 +15,7 @@ import           Network.HTTP.Client
 import           Network.HTTP.Client.TLS
 import           Network.HTTP.Base
 import           API.APITypes
+import           API.MiscIO
 
 ytAPIkey :: String
 ytAPIkey = "AIzaSyBjXUQoe09edP1nkUC55xQLoJrFM3SoAx4"
@@ -50,8 +51,7 @@ playlistLink :: [YTLink] -> String
 playlistLink [] = ""
 playlistLink lst = vid (head lst) ++ "," ++ playlistLink (tail lst) 
 
-ytURLGen :: Artist -> SongList -> IO ()
+ytURLGen :: Artist -> SongList -> IO String
 ytURLGen a sl = do
   ytpl <- generateYTPlaylist a sl
-  putStr "http://www.youtube.com/watch_videos?video_ids="
-  putStrLn $ playlistLink $ removeNothings ytpl
+  return $ "http://www.youtube.com/watch_videos?video_ids=" ++ playlistLink (removeNothings ytpl)

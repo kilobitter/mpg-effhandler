@@ -3,8 +3,10 @@
 
 module MiscMock where
 
-import APITypes
+import API.APITypes
 import Data.Functor.Identity
+
+
 
 getArtistMock :: Identity String
 getArtistMock = "Bones"

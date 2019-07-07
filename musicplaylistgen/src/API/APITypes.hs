@@ -82,8 +82,8 @@ instance FromJSON SetList where
 
 instance FromJSON Song where
   parseJSON = withObject "Song" $ \o -> do
-          [song] <- o .: "song"
-          sname <- o .:? "name" .!= "--empty--"
+          [song] <- o .:  "song"
+          sname <- song .:? "name" .!= "--empty--"
           return $ Song sname
 
 -- YT-specific
