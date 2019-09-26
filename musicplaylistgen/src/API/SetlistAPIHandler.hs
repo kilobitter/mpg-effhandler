@@ -45,7 +45,7 @@ setListApiRequest mbartist limit = do
 
 
 
-setListApiRequestTest :: IO (Either String SetListList)
+setListApiRequestTest :: MBArtist -> Limit -> IO (Either String SetListList)
 setListApiRequestTest mbartist limit = do
   man <- newManager settings
   reqURL <- parseRequest ("https://api.setlist.fm/rest/1.0/artist/" ++

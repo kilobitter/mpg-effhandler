@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module MiscMock where
+module Mocking.MiscMock where
 
 import API.APITypes
 import Data.Functor.Identity

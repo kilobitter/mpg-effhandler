@@ -11,10 +11,10 @@ import qualified Data.Text as T
 import Control.Monad.Trans
 
 import Data.Functor.Identity
-import LastAPIHandler
-import YTAPIHandler
-import APITypes
-import MiscIO
+import API.LastAPIHandler
+import API.YTAPIHandler
+import API.APITypes
+import API.MiscIO
 
 
 requestMock :: Country -> Limit -> Identity CSongList

@@ -7,7 +7,7 @@ import API.LastAPIHandler
 import API.YTAPIHandler
 import API.APITypes
 import API.MiscIO
-import LastMock
+import Mocking.LastMock
 
 import           Data.Functor.Identity
 import           Data.Maybe

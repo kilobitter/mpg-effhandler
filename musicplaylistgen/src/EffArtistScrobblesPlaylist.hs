@@ -5,7 +5,7 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
 
-module ArtistScrobblesPlaylist where
+module EffArtistScrobblesPlaylist where
 
 import API.LastAPIHandler
 import API.YTAPIHandler
@@ -24,8 +24,6 @@ import           Data.Function ((&))
 import           Control.Effects.Eff
 import           Control.Effects.IO
 import           Control.Effects.State
-import           Control.Concurrent
-import           Control.Concurrent.Async
 
 
 
@@ -53,7 +51,7 @@ runProgram = do
 data EffAPI a
   = ReqAPI Artist Limit (SongList -> a)
   | ReqArt (Artist -> a)
-  | ReqLim (Limit -> a) 
+  | ReqLim (Limit -> a)
   deriving (Functor, Typeable)
 
 requestapi :: (Member EffAPI r) => Artist -> Limit -> Eff r SongList
