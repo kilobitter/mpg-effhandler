@@ -65,6 +65,21 @@ getLimit = effect $ \k -> inj $ ReqLim k
 
 -- definition IO handler for API 1
 
+-- to implement parallel: want to use handler inside handler
+-- alternative method: create entirely separate handler
+
+multirequestHandler :: (Member LiftIO r) => Handler EffAPI r a a
+multirequestHandler (Value a) = return a
+multirequestHandler (Comp (ReqAPI a l k)) = do
+  x <- finish $ liftIO $ multFMArtistList (splitArtists a) l
+  k x
+multirequestHandler (Comp (ReqArt k)) = do
+    x <- finish $ liftIO getArtistIO
+    k x
+multirequestHandler (Comp (ReqLim k)) = do
+    x <- finish $ liftIO getLimitIO
+    k x
+
 requestHandler :: (Member LiftIO r) => Handler EffAPI r a a
 requestHandler (Value a) = return a
 requestHandler (Comp (ReqAPI a l k)) = do

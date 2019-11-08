@@ -11,6 +11,10 @@ import           Data.Functor.Identity
 import qualified Data.Text as T
 import           GHC.Generics
 import           Data.ByteString.Char8 (pack)
+import Control.Concurrent.Async
+import           Data.List as L
+import           Data.List.Split
+import           Data.Maybe
 
 import           Network.HTTP.Client
 import           Network.HTTP.Client.TLS
@@ -68,6 +72,22 @@ lastFmApiGeoRequest country limit = do
 
 --return a list of songlists based on multiple artists, separated by commas
 
--- multFMArtistList :: Artist -> Limit -> MaybeT IO SongList
--- multFMArtistList a l = do
---   list <- splitOn 
+splitArtists :: Artist -> [Artist]
+splitArtists = splitOn ","
+
+multFMArtistList :: [Artist] -> Limit -> IO SongList
+multFMArtistList artists limit = do 
+  lizt <- mapConcurrently (\x -> runMaybeT $ lastFmApiTopRequest x limit) artists
+  return (concatSongLists $ removeNothings lizt)
+  
+
+interleaveSongList :: [Maybe SongList] -> SongList
+interleaveSongList msl = SongList $ concat $ L.transpose (map list (removeNothings msl))
+
+removeNothings :: [Maybe a] -> [a]
+removeNothings [] = []
+removeNothings (Just h:t) =  h:removeNothings t
+removeNothings (Nothing:t) =  removeNothings t
+
+concatSongLists :: [SongList] -> SongList
+concatSongLists lsl = SongList $ concatMap list lsl

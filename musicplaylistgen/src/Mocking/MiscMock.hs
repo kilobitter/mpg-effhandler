@@ -8,10 +8,10 @@ import Data.Functor.Identity
 
 
 
-getArtistMock :: Identity String
+getArtistMock :: Identity Artist
 getArtistMock = "Bones"
 
-getLimitMock :: Identity String
+getLimitMock :: Identity Limit
 getLimitMock = "3"
 
 getCountryMock :: Identity String

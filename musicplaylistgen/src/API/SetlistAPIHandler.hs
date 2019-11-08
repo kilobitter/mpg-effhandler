@@ -39,7 +39,7 @@ setListApiRequest mbartist limit = do
             -- Note that the following settings will be completely ignored.
             { proxy = Just $ Proxy "localhost" 1234,
               requestHeaders = [(apiHeader, apiKey),(hAccept,"application/json")]
-            }
+            } 
   response <- lift (httpLbs req man)
   MaybeT (return (decode (responseBody response) :: Maybe SLSongList))
 
