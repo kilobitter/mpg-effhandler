@@ -5,6 +5,7 @@ module API.APITypes where
 
 
 import           Data.Aeson
+import           Data.Aeson.Types
 import           Data.Functor.Identity
 import qualified Data.Text as T
 import           GHC.Generics
@@ -30,7 +31,7 @@ type Country = String
 instance FromJSON SongList where
     parseJSON = withObject "SongList" $ \o -> do
             topSongsO <- o .: "toptracks"
-            songList     <- topSongsO .: "track"
+            songList  <- topSongsO .: "track"
             return $ SongList songList
 
 instance FromJSON SongPlays where
@@ -107,3 +108,15 @@ instance FromJSON MBArtist where
             idA     <- artistO .: "id"
             name <- artistO .: "name"
             return $ MBArtist name idA
+
+
+-- Parsing-specific
+
+verboseParser :: Value -> Parser (Either String SongList)
+verboseParser v =
+  case parseEither parseJSON v of
+    Left err -> return . Left $ err ++ " -- Invalid object is: " ++ show v
+    Right parsed -> return $ Right parsed
+
+
+parse parseJSON parseJS

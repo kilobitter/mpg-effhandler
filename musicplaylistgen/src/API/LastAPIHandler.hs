@@ -21,7 +21,8 @@ import           Network.HTTP.Client.TLS
 import           Network.HTTP.Base
 import           API.APITypes
 import           Control.Concurrent
-import           Control.Concurrent.Async
+import           Control.Concurrent.MSem
+import qualified Data.Traversable as T
 
 apiKey :: String
 apiKey = "835789484db9bf9715aa1fd908be19f9"
@@ -66,6 +67,11 @@ lastFmApiGeoRequest country limit = do
   response <- lift (httpLbs req man)
   MaybeT (return (decode (responseBody response) :: Maybe CSongList))
 
+  --HIER zou decode dus abstract moeten zijn, vervangen door "decoder" ofzo
+  --die zou dan ofwel gewoon "decode" of "parseEither verboseparse" moeten zijn,
+  -- en da zou op zich al genoeg moeten zijn
+  -- oftewel de hele rambam abstract maken??
+
 -------------------------
 --concurrency functions
 --------------------------
@@ -75,9 +81,14 @@ lastFmApiGeoRequest country limit = do
 splitArtists :: Artist -> [Artist]
 splitArtists = splitOn ","
 
+mapPool :: T.Traversable t => Int -> (a -> IO b) -> t a -> IO (t b)
+mapPool max f xs = do
+    sem <- new max
+    mapConcurrently (with sem . f) xs
+
 multFMArtistList :: [Artist] -> Limit -> IO SongList
 multFMArtistList artists limit = do 
-  lizt <- mapConcurrently (\x -> runMaybeT $ lastFmApiTopRequest x limit) artists
+  lizt <- mapPool 2 (\x -> runMaybeT $ lastFmApiTopRequest x limit) artists
   return (concatSongLists $ removeNothings lizt)
   
 
