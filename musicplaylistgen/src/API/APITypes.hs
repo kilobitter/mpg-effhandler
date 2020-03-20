@@ -117,6 +117,3 @@ verboseParser v =
   case parseEither parseJSON v of
     Left err -> return . Left $ err ++ " -- Invalid object is: " ++ show v
     Right parsed -> return $ Right parsed
-
-
-parse parseJSON parseJS

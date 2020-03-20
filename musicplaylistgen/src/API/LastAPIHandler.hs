@@ -1,5 +1,6 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE FlexibleContexts #-}
 
 module API.LastAPIHandler where
 
@@ -86,10 +87,10 @@ mapPool max f xs = do
     sem <- new max
     mapConcurrently (with sem . f) xs
 
-multFMArtistList :: [Artist] -> Limit -> IO SongList
+multFMArtistList :: [Artist] -> Limit -> MaybeT IO SongList
 multFMArtistList artists limit = do 
-  lizt <- mapPool 2 (\x -> runMaybeT $ lastFmApiTopRequest x limit) artists
-  return (concatSongLists $ removeNothings lizt)
+  lizt <- lift $ mapPool 2 (\x -> runMaybeT $ lastFmApiTopRequest x limit) artists
+  MaybeT $ return (concatSongLists $ removeNothings lizt)
   
 
 interleaveSongList :: [Maybe SongList] -> SongList
@@ -100,5 +101,5 @@ removeNothings [] = []
 removeNothings (Just h:t) =  h:removeNothings t
 removeNothings (Nothing:t) =  removeNothings t
 
-concatSongLists :: [SongList] -> SongList
-concatSongLists lsl = SongList $ concatMap list lsl
+concatSongLists :: [SongList] -> Maybe SongList
+concatSongLists lsl = Just $ SongList $ concatMap list lsl

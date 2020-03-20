@@ -1,0 +1,36 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0302 
+header_name {.h} 
+code_name {.cxx}
+Function {make_window()} {open
+} {
+  Fl_Window {} {
+    label MPG open selected
+    xywh {39 245 252 158} type Double visible
+  } {
+    Fl_Button {} {
+      label Generate
+      xywh {165 115 65 25}
+    }
+    Fl_Input {} {
+      label Artist
+      xywh {50 20 200 30}
+    }
+    Fl_Input {} {
+      label Limit
+      xywh {50 55 195 25}
+    }
+    Fl_Group {} {open
+      xywh {15 100 195 50}
+    } {
+      Fl_Round_Button {} {
+        label Scrobbles
+        xywh {20 105 25 20} down_box ROUND_DOWN_BOX
+      }
+      Fl_Round_Button {} {
+        label Concerts
+        xywh {20 125 25 20} down_box ROUND_DOWN_BOX
+      }
+    }
+  }
+} 

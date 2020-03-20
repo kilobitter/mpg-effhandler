@@ -30,11 +30,11 @@ main :: IO ()
 main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiTopRequest (\a b -> lift (printPlaylist a b))))
 
 mockRun :: IO ()
-mockRun = putStr (runIdentity 
+mockRun = putStr  (runIdentity 
                     (artistRequest 
                         getArtistMock
                         getLimitMock 
-                        requestMockS 
+                        requestMockS
                         playlistToString))
 
 ytIORun :: IO ()
@@ -58,5 +58,5 @@ multiYtIORun = fmap (const ()) (runMaybeT
                                 (artistRequest 
                                     (lift getArtistIO) 
                                     (lift getLimitIO) 
-                                    multiFmApiTopRequest 
+                                    (multFMArtistList . splitArtists)
                                     (\a b -> lift (ytURLGen a b))))

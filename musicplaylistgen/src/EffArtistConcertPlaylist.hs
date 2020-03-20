@@ -1,7 +1,7 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
-module ArtistConcertPlaylist where
+module EffArtistConcertPlaylist where
 
 -- 58eb085d-e1b6-4d6f-a070-f35e860dd4fe - API key
 import           Control.Monad.Trans

@@ -27,12 +27,12 @@ import           Control.Effects.State
 
 
 
-artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> Limit -> f SongList) -> (Artist -> SongList -> f a) -> f a
-artistRequest getArtist getLimit getPopSongs printPL = do
-    artist <- getArtist
-    limit <- getLimit
-    result <- getPopSongs artist limit
-    printPL artist result
+-- artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> Limit -> f SongList) -> (Artist -> SongList -> f a) -> f a
+-- artistRequest getArtist getLimit getPopSongs printPL = do
+--     artist <- getArtist
+--     limit <- getLimit
+--     result <- getPopSongs artist limit
+--     printPL artist result
 
 main :: IO ()
 main = putStrLn "hello world"
@@ -71,8 +71,8 @@ getLimit = effect $ \k -> inj $ ReqLim k
 multirequestHandler :: (Member LiftIO r) => Handler EffAPI r a a
 multirequestHandler (Value a) = return a
 multirequestHandler (Comp (ReqAPI a l k)) = do
-  x <- finish $ liftIO $ multFMArtistList (splitArtists a) l
-  k x
+  x <- finish $ liftIO $ runMaybeT $ multFMArtistList (splitArtists a) l
+  k $ fromJust x
 multirequestHandler (Comp (ReqArt k)) = do
     x <- finish $ liftIO getArtistIO
     k x
@@ -96,7 +96,7 @@ mockHandler :: Handler EffAPI r a a
 mockHandler (Value a) = return a
 mockHandler (Comp (ReqAPI a l k)) = do
   x <- finish $  return $ runIdentity $ requestMockS a l
-  k (fromJust x)
+  k x
 mockHandler (Comp (ReqArt k)) = do
     x <- finish $ return $ runIdentity getArtistMock
     k x
@@ -132,6 +132,7 @@ testH = runProgram
   & handle ytPlayHandler
   & handle ioHandler
   & runPure
+
 
 testMock :: String
 testMock = runProgram

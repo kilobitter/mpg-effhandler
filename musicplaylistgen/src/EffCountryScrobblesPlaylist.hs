@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
-module CountryScrobblesPlaylist where
+module EffCountryScrobblesPlaylist where
 
 -- 835789484db9bf9715aa1fd908be19f9 - API key
 import Control.Monad.Trans.Maybe
