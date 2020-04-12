@@ -1,0 +1,102 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 5e91cd0f92dbe04a7aa39d8dde39f1ff2dc0f15a1a9fac0cf948a27b2f73c4fc
+
+name:           musicplaylistgen
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/musicplaylistgen#readme>
+homepage:       https://github.com/githubuser/musicplaylistgen#readme
+bug-reports:    https://github.com/githubuser/musicplaylistgen/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/musicplaylistgen
+
+library
+  exposed-modules:
+      ArtistConcertPlaylist
+      ArtistScrobblesPlaylist
+      CountryScrobblesPlaylist      
+      EffArtistConcertPlaylist
+      EffArtistScrobblesPlaylist
+      EffCountryScrobblesPlaylist
+      -- MArtistConcertPlaylist
+      -- MArtistScrobblesPlaylist
+      -- MCountryScrobblesPlaylist
+      Lib
+  other-modules:
+      Paths_musicplaylistgen
+      API.APITypes
+      API.LastAPIHandler
+      API.MBAPIHandler
+      API.YTAPIHandler
+      API.MiscIO
+      API.SetlistAPIHandler
+      Mocking.LastMock
+      Mocking.MiscMock
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5,
+      aeson,
+      http-client,
+      HTTP,
+      mtl,
+      bytestring,
+      time,
+      transformers,
+      dates,
+      http-types,
+      text,
+      http-client-tls,
+      effect-handlers,
+      extensible-effects,
+      yesod-auth-oauth2,
+      async,
+      split,
+      aeson-better-errors,
+      SafeSemaphore,
+      open-browser,
+      threepenny-gui,
+      http-listen,
+      network
+
+  default-language: Haskell2010
+
+executable musicplaylistgen-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_musicplaylistgen
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , musicplaylistgen
+  default-language: Haskell2010
+
+test-suite musicplaylistgen-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_musicplaylistgen
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , musicplaylistgen
+  default-language: Haskell2010
