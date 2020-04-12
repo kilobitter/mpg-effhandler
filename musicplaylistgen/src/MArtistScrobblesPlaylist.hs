@@ -64,7 +64,7 @@ instance MusicAPI MultiLastFM IO where
 instance MusicAPI Mock Identity where
   getArtist _ = getArtistMock
   getLimit _ = getLimitMock
-  getPopSongs _ = requestMockS
+  getPopSongs _ a l = lift $ requestMockS a l
 
 data PLAPIs
  = YouTube

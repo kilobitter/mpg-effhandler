@@ -3,7 +3,8 @@
 
 module API.YTAPIHandler where
 
--- AIzaSyBjXUQoe09edP1nkUC55xQLoJrFM3SoAx4 - yt API key
+
+import           API.APIKeys
 import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
 import           Data.Aeson
@@ -16,9 +17,6 @@ import           Network.HTTP.Client.TLS
 import           Network.HTTP.Base
 import           API.APITypes
 import           API.MiscIO
-
-ytAPIkey :: String
-ytAPIkey = "AIzaSyBjXUQoe09edP1nkUC55xQLoJrFM3SoAx4"
 
 
 settings :: ManagerSettings

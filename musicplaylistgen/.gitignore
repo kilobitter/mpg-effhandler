@@ -1,4 +1,5 @@
 .stack-work/
 musicplaylistgen.cabal
 haskell-ide-engine/
+src/API/APIKeys.hs
 *~

@@ -1,10 +1,10 @@
-{-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE FlexibleContexts #-}
 
 module API.LastAPIHandler where
 
--- 835789484db9bf9715aa1fd908be19f9 - API key
+import           API.APIKeys
 import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
 import           Data.Aeson
@@ -25,11 +25,6 @@ import           Control.Concurrent
 import           Control.Concurrent.MSem
 import qualified Data.Traversable as T
 
-apiKey :: String
-apiKey = "835789484db9bf9715aa1fd908be19f9"
-
-ytAPIkey :: String
-ytAPIkey = "AIzaSyBjXUQoe09edP1nkUC55xQLoJrFM3SoAx4"
 
 settings :: ManagerSettings
 settings =  managerSetProxy
@@ -41,7 +36,7 @@ lastFmApiTopRequest artist limit = do
   man <- lift (newManager settings)
   reqURL <- parseRequest ("http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks" ++ 
                            "&artist=" ++ artist ++
-                           "&api_key=" ++ apiKey ++ 
+                           "&api_key=" ++ lastAPIKey ++ 
                            "&limit=" ++ limit ++
                            "&format=json")
   let req = reqURL
@@ -58,7 +53,7 @@ lastFmApiGeoRequest country limit = do
   man <- lift (newManager settings)
   reqURL <- parseRequest ("http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks" ++ 
                            "&country=" ++ country ++
-                           "&api_key=" ++ apiKey ++ 
+                           "&api_key=" ++ lastAPIKey ++ 
                            "&limit=" ++ limit ++
                          "&format=json")
   let req = reqURL

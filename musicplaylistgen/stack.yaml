@@ -50,7 +50,7 @@ extra-deps: [
   effect-handlers-0.1.0.8,
   extensible-effects-5.0.0.1,
   intero-0.1.40,
-  fltkhs-0.8.0.2]
+  http-listen-0.1.0.0]
 
 # Override default flag values for local packages and extra-deps
 # flags: {}

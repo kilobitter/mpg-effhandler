@@ -89,12 +89,12 @@ packages:
   original:
     hackage: intero-0.1.40
 - completed:
-    hackage: fltkhs-0.8.0.2@sha256:9b253dcf27081a029e677f50c0b1036a8455ff56fd01ae9fa585b4a8e9bb93e6,14196
+    hackage: http-listen-0.1.0.0@sha256:968de91e5c6c468a62f8f5bff6b465dea5fcd0d33b024dc81df1a9cea9beb2ef,2310
     pantry-tree:
-      size: 35008
-      sha256: 86c7f65ce86f67089801bed53fa79a55ffe6f584a578bd17baff56de78f85c62
+      size: 453
+      sha256: 41fe9f560616435143ae342d3be91b4fc99d116c7ba0dac33118cda9522a1e0f
   original:
-    hackage: fltkhs-0.8.0.2
+    hackage: http-listen-0.1.0.0
 snapshots:
 - completed:
     size: 500539

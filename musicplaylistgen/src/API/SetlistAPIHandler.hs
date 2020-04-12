@@ -1,8 +1,10 @@
-{-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
 module API.SetlistAPIHandler where
 
+
+import           API.APIKeys
 import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
 import           Data.Aeson
@@ -19,8 +21,6 @@ import           Data.ByteString (ByteString)
 import           Network.HTTP.Types.Header
 import           API.APITypes
 
-apiKey :: ByteString
-apiKey = "58eb085d-e1b6-4d6f-a070-f35e860dd4fe"
 apiHeader :: HeaderName
 apiHeader = "x-api-key"
 
@@ -38,7 +38,7 @@ setListApiRequest mbartist limit = do
   let req = reqURL
             -- Note that the following settings will be completely ignored.
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(apiHeader, apiKey),(hAccept,"application/json")]
+              requestHeaders = [(apiHeader, setlistAPIKey),(hAccept,"application/json")]
             } 
   response <- lift (httpLbs req man)
   MaybeT (return (decode (responseBody response) :: Maybe SLSongList))
@@ -52,7 +52,7 @@ setListApiRequestTest mbartist limit = do
                             artId mbartist ++ "/setlists")
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(apiHeader, apiKey),(hAccept,"application/json")]
+              requestHeaders = [(apiHeader, setlistAPIKey),(hAccept,"application/json")]
             }
   response <- httpLbs req man
   return (eitherDecode (responseBody response) :: Either String SetListList)
