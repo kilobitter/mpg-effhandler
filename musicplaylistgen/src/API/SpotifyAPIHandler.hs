@@ -40,12 +40,16 @@ spURLGen a sl = do
                 "&scope=playlist-modify-public" ++
                 "&redirect_uri=localhost:8999%2Fcallback")
     
-    bracket (prepareSocket 8999) close
+    authcode <- bracket (prepareSocket 8999) close
             (\sock -> do 
                 conn <- acceptConnection sock
                 stream <- openStream conn
                 result <- receiveRequest stream -- moet deze ergens bijhouden
-                closeStream stream)
-    
+                closeStream stream
+                return result)
+    parseSpotifyRequest authcode
     
 
+parseSpotifyRequest :: Result -> String
+parseSpotifyRequest (Left a) = "Error occurred"
+parseSpotifyRequest (Right b) = parseQuery $ uriQuery $ rqURI b
