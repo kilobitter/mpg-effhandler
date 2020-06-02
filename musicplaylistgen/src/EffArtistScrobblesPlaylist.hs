@@ -1,4 +1,4 @@
-{-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
+{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE DeriveFunctor #-}
 {-# LANGUAGE FlexibleContexts #-}
@@ -10,9 +10,12 @@ module EffArtistScrobblesPlaylist where
 import API.LastAPIHandler
 import API.YTAPIHandler
 import API.APITypes
+import API.SpotifyAPIHandler
 import API.MiscIO
 import Mocking.LastMock
 import Mocking.MiscMock
+import GUI.WebForm
+
 
 import           Data.Functor.Identity
 import           Data.Maybe
@@ -20,48 +23,55 @@ import           Control.Monad.Trans.Maybe
 import           Control.Monad.Trans hiding (liftIO)
 import           Control.Monad (join)
 import           Data.Function ((&))
+import           Control.Concurrent.MVar
 
 import           Control.Effects.Eff
 import           Control.Effects.IO
 import           Control.Effects.State
 
-
-
--- artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> Limit -> f SongList) -> (Artist -> SongList -> f a) -> f a
--- artistRequest getArtist getLimit getPopSongs printPL = do
---     artist <- getArtist
---     limit <- getLimit
---     result <- getPopSongs artist limit
---     printPL artist result
-
 main :: IO ()
 main = putStrLn "hello world"
 
 
-runProgram :: (Member EffAPI r, Member EffPlaylist r) =>
+runProgram :: (Member EffAPI r, Member EffPlaylist r, Member EffIO r) =>
   Eff r String
 runProgram = do
-  artist <- getArtist
-  limit <- getLimit
+  (artist,limit) <- getArtLim
   playlist <- requestapi artist limit
   genPlaylist artist playlist
 
+data EffIO a 
+  = ReqArtLim ((Artist, Limit) -> a) 
+  deriving (Functor, Typeable) 
+
+getArtLim :: (Member EffIO r) => Eff r (Artist, Limit)
+getArtLim = effect $ \k -> inj $ ReqArtLim k
+
+cmdHandler :: (Member LiftIO r) => Handler EffIO r a a
+cmdHandler (Value a) = return a
+cmdHandler (Comp (ReqArtLim k)) = do
+    x <- finish $ liftIO getArtLimIO
+    k x
+
+webHandler :: (Member LiftIO r) => Handler EffIO r a a
+webHandler (Value a) = return a
+webHandler (Comp (ReqArtLim k)) = do
+    x <- finish $ liftIO getArtLimWeb
+    k x
+
+noIOHandler :: (String, String) -> Handler EffIO r a a 
+noIOHandler _ (Value a) = return a
+noIOHandler (a,l) (Comp (ReqArtLim k)) = do
+    x <- finish $ return $ runIdentity $ getArtLimMock a l
+    k x
 
 
 data EffAPI a
   = ReqAPI Artist Limit (SongList -> a)
-  | ReqArt (Artist -> a)
-  | ReqLim (Limit -> a)
   deriving (Functor, Typeable)
 
 requestapi :: (Member EffAPI r) => Artist -> Limit -> Eff r SongList
 requestapi a l = effect $ \k -> inj $ ReqAPI a l k
-
-getArtist :: (Member EffAPI r) => Eff r Artist
-getArtist = effect $ \k -> inj $ ReqArt k
-
-getLimit :: (Member EffAPI r) => Eff r Limit
-getLimit = effect $ \k -> inj $ ReqLim k
 
 -- definition IO handler for API 1
 
@@ -73,36 +83,18 @@ multirequestHandler (Value a) = return a
 multirequestHandler (Comp (ReqAPI a l k)) = do
   x <- finish $ liftIO $ runMaybeT $ multFMArtistList (splitArtists a) l
   k $ fromJust x
-multirequestHandler (Comp (ReqArt k)) = do
-    x <- finish $ liftIO getArtistIO
-    k x
-multirequestHandler (Comp (ReqLim k)) = do
-    x <- finish $ liftIO getLimitIO
-    k x
 
 requestHandler :: (Member LiftIO r) => Handler EffAPI r a a
 requestHandler (Value a) = return a
 requestHandler (Comp (ReqAPI a l k)) = do
   x <- finish $ liftIO $ runMaybeT $ lastFmApiTopRequest a l
   k (fromJust x)
-requestHandler (Comp (ReqArt k)) = do
-    x <- finish $ liftIO getArtistIO
-    k x
-requestHandler (Comp (ReqLim k)) = do
-    x <- finish $ liftIO getLimitIO
-    k x
 
-mockHandler :: Handler EffAPI r a a
-mockHandler (Value a) = return a
-mockHandler (Comp (ReqAPI a l k)) = do
+mockHandler :: (String, String) -> Handler EffAPI r a a
+mockHandler _ (Value a) = return a
+mockHandler _ (Comp (ReqAPI a l k)) = do
   x <- finish $  return $ runIdentity $ requestMockS a l
   k x
-mockHandler (Comp (ReqArt k)) = do
-    x <- finish $ return $ runIdentity getArtistMock
-    k x
-mockHandler (Comp (ReqLim k)) = do
-    x <- finish $ return $ runIdentity getLimitMock
-    k x
 
       --main = putStr (runIdentity (artistRequest getArtistMock getLimitMock requestMockS playlistToString))
   --main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiTopRequest (\a b -> lift (ytURLGen a b))))
@@ -120,9 +112,15 @@ ytPlayHandler (Comp (EffPlaylist a sl k)) = do
   x <- finish $ liftIO $ ytURLGen a sl
   k x 
 
-textPlayHandler :: Handler EffPlaylist r a a
-textPlayHandler (Value a) = return a
-textPlayHandler (Comp (EffPlaylist a sl k)) = do
+spPlayHandler :: (Member LiftIO r) => Handler EffPlaylist r a a
+spPlayHandler (Value a) = return a
+spPlayHandler (Comp (EffPlaylist a sl k)) = do
+  x <- finish $ liftIO $ spURLGen a sl
+  k x 
+
+mockPlayHandler :: Handler EffPlaylist r a a
+mockPlayHandler (Value a) = return a
+mockPlayHandler (Comp (EffPlaylist a sl k)) = do
   x <- finish $ return $ runIdentity $ playlistToString a sl
   k x
 
@@ -134,8 +132,8 @@ testH = runProgram
   & runPure
 
 
-testMock :: String
-testMock = runProgram
-  & handle mockHandler
-  & handle textPlayHandler
+testMock :: (String, String) -> String
+testMock al = runProgram
+  & handle (mockHandler al)
+  & handle mockPlayHandler
   & runPure

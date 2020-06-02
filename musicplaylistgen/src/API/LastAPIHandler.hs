@@ -63,11 +63,6 @@ lastFmApiGeoRequest country limit = do
   response <- lift (httpLbs req man)
   MaybeT (return (decode (responseBody response) :: Maybe CSongList))
 
-  --HIER zou decode dus abstract moeten zijn, vervangen door "decoder" ofzo
-  --die zou dan ofwel gewoon "decode" of "parseEither verboseparse" moeten zijn,
-  -- en da zou op zich al genoeg moeten zijn
-  -- oftewel de hele rambam abstract maken??
-
 -------------------------
 --concurrency functions
 --------------------------

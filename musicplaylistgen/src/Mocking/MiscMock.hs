@@ -6,16 +6,17 @@ module Mocking.MiscMock where
 import API.APITypes
 import Data.Functor.Identity
 
+getArtLimMock :: String -> String -> Identity (Artist, Limit)
+getArtLimMock sa sl = Identity (sa, sl)
 
+getArtistMock :: String -> Identity Artist
+getArtistMock = Identity
 
-getArtistMock :: Identity Artist
-getArtistMock = "Bones"
+getLimitMock :: String -> Identity Limit
+getLimitMock = Identity
 
-getLimitMock :: Identity Limit
-getLimitMock = "3"
-
-getCountryMock :: Identity String
-getCountryMock = "Belgium"
+getCountryMock :: String -> Identity String
+getCountryMock = Identity
 
 -- setlist-playlist
 playlistToStringSL :: Artist -> SLSongList -> Identity String

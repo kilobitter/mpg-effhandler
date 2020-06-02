@@ -16,13 +16,6 @@ import API.YTAPIHandler
 import API.APITypes
 import API.MiscIO
 
-
-requestMock :: Country -> Limit -> Identity CSongList
-requestMock country lim
-    | country == "Belgium" && lim == "3" = Identity (CSongList [CSongPlays "Bones" "Dirt" 25, CSongPlays "Bones" "hdmi"  18, CSongPlays "Bones" "Corduroy" 7])
-    | otherwise = error "Called with wrong arguments"
-
-
 countryRequest :: (Monad f) => f Country -> f Limit -> (Country -> Limit -> f CSongList) -> (Country -> CSongList -> f a) -> f a
 countryRequest getCountry getLimit getPopSongs printPL = do
     country <- getCountry

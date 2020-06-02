@@ -14,6 +14,7 @@ import API.APITypes
 import API.MiscIO
 import Mocking.LastMock
 import Mocking.MiscMock
+import GUI.WebForm
 
 import           Data.Functor.Identity
 import           Data.Maybe
@@ -22,9 +23,8 @@ import           Control.Monad.Trans
 
 -- artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> Limit -> f SongList) -> (Artist -> SongList -> f a) -> f a
 -- artistRequest :: (Proxy MusicAPI m) => m -> f a
-artistRequest mP pP = do
-   artist <- getArtist mP
-   limit <- getLimit mP
+artistRequest mP pP iP = do
+   (artist,limit) <- getArtLim iP
    list <- getPopSongs mP artist limit
    genPlaylist pP artist list
 
@@ -37,33 +37,41 @@ main = do
 --main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiTopRequest (\a b -> lift (ytURLGen a b))))
 -- main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiTopRequest (\a b -> lift (printPlaylist a b))))
 
-
 data Proxy s = Proxy
+
+data InputMethod
+  = Cmd
+  | WebForm
+  | MockInput
+
+class MusicInput (a :: InputMethod) f where
+  getArtLim :: Proxy a -> f (Artist, Limit)
+
+instance MusicInput Cmd IO where
+  getArtLim _ = getArtLimIO
+
+instance MusicInput WebForm IO where
+  getArtLim _ = getArtLimWeb
+
+-- moet hier de argumenten geven want gaat niet in de aanroep, er is geen "handler" die argumenten kan pakken, jammer
+instance MusicInput MockInput Identity where
+  getArtLim _ = getArtLimMock "Roedel" "7"
 
 data MusicAPIs
   = LastFM
   | MultiLastFM
-  | Mock
+  | MockAPI
 
 class MusicAPI (a :: MusicAPIs) f where
-  getArtist :: Proxy a -> f Artist
-  getLimit :: Proxy a -> f Limit
   getPopSongs :: Proxy a -> Artist -> Limit -> MaybeT f SongList
 
 instance MusicAPI LastFM IO where
-  getArtist _ = getArtistIO
-  getLimit _ = getLimitIO
   getPopSongs _ = lastFmApiTopRequest
 
 instance MusicAPI MultiLastFM IO where
-  getArtist _ = getArtistIO
-  getLimit _ = getLimitIO
   getPopSongs _ a = multFMArtistList (splitArtists a)
-  
 
-instance MusicAPI Mock Identity where
-  getArtist _ = getArtistMock
-  getLimit _ = getLimitMock
+instance MusicAPI MockAPI Identity where
   getPopSongs _ a l = lift $ requestMockS a l
 
 data PLAPIs
@@ -77,22 +85,8 @@ class PlaylistAPI (a :: PLAPIs) f where
 instance PlaylistAPI YouTube IO where
   genPlaylist _ = ytURLGen
 
+instance PlaylistAPI Spotify IO where
+  genPlaylist _ = spURLGen
+
 instance PlaylistAPI MockPL Identity where
   genPlaylist _ =  playlistToString
-
-
-  
--- class MusicAPI f where
---   getArtist :: f Artist
---   getLimit :: f Limit
---   getPopSongs :: Artist -> Limit -> MaybeT f SongList
-
--- instance MusicAPI IO where
---   getArtist = getArtistIO
---   getLimit = getLimitIO
---   getPopSongs = lastFmApiTopRequest
-
--- instance MusicAPI Identity where
---   getArtist = getArtistMock
---   getLimit = getLimitMock
---   getPopSongs = requestMockS

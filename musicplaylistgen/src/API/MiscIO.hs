@@ -1,9 +1,14 @@
-{-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
 module API.MiscIO where
 
 import API.APITypes
+
+getArtLimIO :: IO (Artist, Limit)
+getArtLimIO = do
+  a <- getArtistIO
+  l <- getLimitIO
+  return (a,l)
     
 getArtistIO :: IO Artist
 getArtistIO = do

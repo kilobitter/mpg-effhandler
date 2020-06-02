@@ -1,4 +1,3 @@
-{-# LANGUAGE DeriveGeneric, OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
 
 module ArtistScrobblesPlaylist where
@@ -25,15 +24,13 @@ artistRequest getArtist getLimit getPopSongs printPL = do
     printPL artist result
 
 main :: IO ()
---main = putStr (runIdentity (artistRequest getArtistMock getLimitMock requestMockS playlistToString))
---main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiTopRequest (\a b -> lift (ytURLGen a b))))
 main = fmap (const ()) (runMaybeT (artistRequest (lift getArtistIO) (lift getLimitIO) lastFmApiTopRequest (\a b -> lift (printPlaylist a b))))
 
-mockRun :: IO ()
-mockRun = putStr  (runIdentity 
+mockRun :: (String, String) -> IO ()
+mockRun (a,l) = putStr  (runIdentity 
                     (artistRequest 
-                        getArtistMock
-                        getLimitMock 
+                        (getArtistMock a)
+                        (getLimitMock l)
                         requestMockS
                         playlistToString))
 

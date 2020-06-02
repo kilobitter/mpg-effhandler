@@ -109,6 +109,29 @@ instance FromJSON MBArtist where
             name <- artistO .: "name"
             return $ MBArtist name idA
 
+-- Spotify-specific
+
+data SPTrackId = SPTrackId {songName :: String, songId :: String} deriving Show
+newtype SPUserId = SPUserId String
+newtype SPPlaylistId = SPPlaylistId String
+
+instance FromJSON SPTrackId where
+    parseJSON = withObject "SPTrackId" $ \o -> do
+      [item] <- o .: "tracks"
+      sid <- item .: "id"
+      sname <- item .: "name"
+      return (SPTrackId sname sid)
+
+instance FromJSON SPUserId where
+    parseJSON = withObject "SPUserId" $ \o -> do
+      sid <- o .: "id"
+      return (SPUserId sid)
+
+instance FromJSON SPPlaylistId where
+    parseJSON = withObject "SPPlaylistId" $ \o -> do
+      sid <- o .: "id"
+      return (SPPlaylistId sid)
+
 
 -- Parsing-specific
 

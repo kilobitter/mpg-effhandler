@@ -22,20 +22,6 @@ import           API.MiscIO
 import           Network.HTTP.Client
 import           Network.HTTP.Types.Header
 
-
-
--- Mock/Pure functions
-
--- requestMock :: Artist -> Limit -> Identity SLSongList
--- requestMock art lim
---     | art == "Bones" && lim == "3" = Identity (SLSongList [SongPlays "Dirt" 25, SongPlays "hdmi"  18, SongPlays "Corduroy" 7])
---     | otherwise = error "Called with wrong arguments"
-
-
-
--- API/IO functions
-
-
 -- Common code
 
 artistRequest :: (Monad f) => f Artist -> f Limit -> (Artist -> f MBArtist) -> (MBArtist -> Limit -> f SLSongList) -> (Artist -> SLSongList -> f a) -> f a
