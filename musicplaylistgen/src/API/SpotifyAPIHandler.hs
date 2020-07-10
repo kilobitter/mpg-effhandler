@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE ScopedTypeVariables #-}
 
 module API.SpotifyAPIHandler where
 
@@ -7,11 +8,13 @@ module API.SpotifyAPIHandler where
 import           API.APIKeys
 import           Control.Monad.Trans
 import           Control.Monad.Trans.Maybe
-import           Data.Aeson
+import           Data.Aeson as AE
 import qualified Data.Text as T
+import           Data.Text.Encoding
+import           Data.Maybe
 import           GHC.Generics
 import qualified Data.ByteString.Lazy as B
-import           Data.ByteString.Char8 (pack)
+import qualified Data.ByteString.Internal as IB
 import           Control.Exception
 import           Network.OAuth.OAuth2
 import           Network.OAuth.OAuth2.TokenRequest
@@ -19,10 +22,15 @@ import           Network.OAuth.OAuth2.TokenRequest
 import           Web.Browser
 import           Network.HTTP.Client
 import           Network.HTTP.Client.TLS
-import           Network.HTTP.Base
+import           Network.HTTP.Base as NB
 import           Network.HTTP.Listen
-import           URI.Encode as E
+import           Network.HTTP.Types.URI
+import           Network.URI.Encode as E
+import           Network.URI
+import           Network.HTTP.Types.Header
+import           Network.HTTP.Types.Status
 import           Network.Socket
+import qualified Network.Stream as NS
 import           API.APITypes
 import           API.MiscIO
 
@@ -49,90 +57,93 @@ spURLGen a sl = do
             (\sock -> do 
                 conn <- acceptConnection sock
                 stream <- openStream conn
-                result <- receiveRequest stream
+                result <- receiveRequest (stream :: Stream String)
                 closeStream stream
                 return result)
-    queryList <- parseSpotifyRequest reqURI
-    authcode <- take 1 [b | (a,b) <- queryList, a == "code"]
-    spotifyRes <- fetchAccessToken man spotifyOAuth authcode
-    (spotifyAT, spotifyRT) <- takeTokens spotifyRes
-    generatePlaylist spotifyAT spotifyRT a sl
-
+    let queryList = parseSpotifyRequest reqURI
+    let authcode = head [b | (a,b) <- queryList, a == "code"]
+    spotifyRes <- fetchAccessToken man spotifyOAuth (ExchangeToken $ decodeUtf8 authcode)
+    let (spotifyAT, spotifyRT) = takeTokens spotifyRes
+    generatePlaylist spotifyAT a sl
     
-takeTokens :: OAuth2Result Errors OAuth2Token -> (AccessToken, RefreshToken)
-takeTokens Left err = do
-                        print err
-                        return ("NaN", "NaN")
-takeTokens Right token = (accessToken token, refreshToken token)
+packStrBS :: String -> IB.ByteString
+packStrBS = encodeUtf8 . T.pack
 
-parseSpotifyRequest :: Result -> String
-parseSpotifyRequest (Left a) = "Error occurred"
-parseSpotifyRequest (Right b) = parseQuery $ uriQuery $ rqURI b
+takeTokens :: OAuth2Result Errors OAuth2Token -> (AccessToken, Maybe RefreshToken)
+takeTokens (Left err) = (AccessToken "NaN", Just $ RefreshToken "NaN")
+takeTokens (Right token) = (accessToken token, refreshToken token)
 
-generatePlaylist :: AccessToken -> RefreshToken -> Artist -> SongList -> IO String
-generatePlayList spAT art sl = do
+parseSpotifyRequest :: NS.Result (NB.Request a) -> SimpleQuery
+parseSpotifyRequest (Left a) = [("ERROR","ERROR")]
+parseSpotifyRequest (Right b) = parseSimpleQuery $ packStrBS $ uriQuery $ rqURI b
+
+generatePlaylist :: AccessToken -> Artist -> SongList -> IO String
+generatePlaylist spAT art sl = do
   sIDs <- spotifySearch spAT art sl
   userId <- spotifyGetUser spAT
-  playlistID <- spotifyCreatePlaylist spAT
+  playlistID <- spotifyCreatePlaylist spAT (fromJust userId) art
   let tracksURI = toSpotURIs sIDs
-  statusResponse <- addSongsToPL spAT playlistID tracksURI
-  "http://open.spotify.com/user/" ++ userId ++ "/playlist/" ++ playlistId
+  statusResponse <- addSongsToPL spAT (fromJust playlistID) tracksURI
+  return $ "http://open.spotify.com/user/" ++ usid (fromJust userId) ++ "/playlist/" ++ pl (fromJust playlistID)
 
 
 spotifySearch :: AccessToken -> Artist -> SongList -> IO [Maybe SPTrackId]
 spotifySearch spAT art (SongList []) = return []
 spotifySearch spAT art (SongList (slh:slt)) = do
   man <- newManager settings
-  urlVars <- urlEncodeVars [("q","artist:" ++ art ++ " track:" ++ name slh),
+  let urlVars = urlEncodeVars [("q","artist:" ++ art ++ " track:" ++ name slh),
                             ("type","track"),
                             ("limit","1")]
   reqURL <- parseUrlThrow ("https://api.spotify.com/v1/search?" ++ 
                            urlVars)
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(hAuthorization,"Bearer " ++ spAT)]
+              requestHeaders = [(hAuthorization, bearerHeader spAT)]
             }
   response <- httpLbs req man
-  helper <- spotifySearch artist (SongList slt)
-  return ((decode (responseBody response) :: Maybe SPTrackId) : helper)
+  helper <- spotifySearch spAT art (SongList slt)
+  return ((AE.decode (responseBody response) :: Maybe SPTrackId) : helper)
 
-spotifyCreatePlaylist :: AccessToken -> SPUserId -> Artist -> IO Maybe SPPlaylistId
+spotifyCreatePlaylist :: AccessToken -> SPUserId -> Artist -> IO (Maybe SPPlaylistId)
 spotifyCreatePlaylist spAT user art = do
   man <- newManager settings
-  let requestObject = object [ "name" .= (("MPG Playlist - " ++ art) :: Text)
-        , "description"  .= ("An MPG-generated playlist"  :: Int)]
-  reqURL <- parseUrlThrow ("https://api.spotify.com/v1/users/" ++ user ++ "/playlists")
+  let requestObject = object [ "name" .= T.append "MPG Playlist - " (T.pack art)
+        , "description" .= ("An MPG-generated playlist" :: T.Text)]
+  reqURL <- parseUrlThrow ("https://api.spotify.com/v1/users/" ++ usid user ++ "/playlists")
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
               method = "POST",
-              requestHeaders = [(hAuthorization,"Bearer " ++ spAT),(hContentType,"application/json")],
-              requestBody = RequestBodyLBS $ encode requestObject
+              requestHeaders = [(hAuthorization, bearerHeader spAT),(hContentType,"application/json")],
+              requestBody = RequestBodyLBS $ AE.encode requestObject
             }
   response <- httpLbs req man
-  return ((decode (responseBody response) :: Maybe SPPlaylistId) : helper)
+  return (AE.decode (responseBody response) :: Maybe SPPlaylistId)
 
-spotifyGetUser :: AccessToken -> IO Maybe SPUserId
+spotifyGetUser :: AccessToken -> IO (Maybe SPUserId)
 spotifyGetUser spAT = do
   man <- newManager settings
   reqURL <- parseUrlThrow "https://api.spotify.com/v1/me"
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(hAuthorization,"Bearer " ++ spAT)]
+              requestHeaders = [(hAuthorization, bearerHeader spAT)]
             }
   response <- httpLbs req man
-  return (decode (responseBody response) :: Maybe SPUserId)
+  return (AE.decode (responseBody response) :: Maybe SPUserId)
 
-toSpotURIs :: [SPTrackId] -> String
-toSpotURIs [item] = ["spotify:track:" ++ item]
-toSpotURIs (h:t) = foldl (\x y -> (x ++ "," ++ y)) ("spotify:track:" ++ h) (map ("spotify:track:" ++ t)) 
+toSpotURIs :: [Maybe SPTrackId] -> String
+toSpotURIs [Just item] = "spotify:track:" ++ songId item
+toSpotURIs (Just h:t) = foldl (\x y -> (x ++ "," ++ y)) ("spotify:track:" ++ songId h) (map (("spotify:track:" ++) . songId . fromJust) t) 
 
 addSongsToPL :: AccessToken -> SPPlaylistId -> String -> IO Int
 addSongsToPL spAT plId trackString = do
   man <- newManager settings
-  reqURL <- parseUrlThrow ("https://api.spotify.com/v1/playlists/" ++ plId ++ "/tracks?uris=" ++ E.encode trackString)
+  reqURL <- parseUrlThrow ("https://api.spotify.com/v1/playlists/" ++ pl plId ++ "/tracks?uris=" ++ E.encode trackString)
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(hAuthorization,"Bearer " ++ spAT)]
+              requestHeaders = [(hAuthorization, bearerHeader spAT)]
             }
   response <- httpLbs req man
   return $ statusCode $ responseStatus response
+
+bearerHeader :: AccessToken -> IB.ByteString
+bearerHeader at = encodeUtf8 $ T.append "Bearer " (atoken at)

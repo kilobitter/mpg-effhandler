@@ -30,7 +30,9 @@ import           Control.Effects.IO
 import           Control.Effects.State
 
 main :: IO ()
-main = putStrLn "hello world"
+main = do
+  sth <- testH
+  putStrLn sth
 
 
 runProgram :: (Member EffAPI r, Member EffPlaylist r, Member EffIO r) =>
@@ -39,6 +41,7 @@ runProgram = do
   (artist,limit) <- getArtLim
   playlist <- requestapi artist limit
   genPlaylist artist playlist
+
 
 data EffIO a 
   = ReqArtLim ((Artist, Limit) -> a) 
@@ -90,9 +93,9 @@ requestHandler (Comp (ReqAPI a l k)) = do
   x <- finish $ liftIO $ runMaybeT $ lastFmApiTopRequest a l
   k (fromJust x)
 
-mockHandler :: (String, String) -> Handler EffAPI r a a
-mockHandler _ (Value a) = return a
-mockHandler _ (Comp (ReqAPI a l k)) = do
+mockHandler :: Handler EffAPI r a a
+mockHandler (Value a) = return a
+mockHandler (Comp (ReqAPI a l k)) = do
   x <- finish $  return $ runIdentity $ requestMockS a l
   k x
 
@@ -126,14 +129,23 @@ mockPlayHandler (Comp (EffPlaylist a sl k)) = do
 
 testH :: IO String
 testH = runProgram
+  & handle cmdHandler
   & handle requestHandler
   & handle ytPlayHandler
   & handle ioHandler
   & runPure
 
+testH2 :: IO String
+testH2 = runProgram
+  & handle webHandler
+  & handle requestHandler
+  & handle spPlayHandler
+  & handle ioHandler
+  & runPure
 
 testMock :: (String, String) -> String
 testMock al = runProgram
-  & handle (mockHandler al)
+  & handle (noIOHandler al)
+  & handle mockHandler
   & handle mockPlayHandler
   & runPure

@@ -112,8 +112,8 @@ instance FromJSON MBArtist where
 -- Spotify-specific
 
 data SPTrackId = SPTrackId {songName :: String, songId :: String} deriving Show
-newtype SPUserId = SPUserId String
-newtype SPPlaylistId = SPPlaylistId String
+newtype SPUserId = SPUserId {usid :: String}
+newtype SPPlaylistId = SPPlaylistId {pl :: String}
 
 instance FromJSON SPTrackId where
     parseJSON = withObject "SPTrackId" $ \o -> do

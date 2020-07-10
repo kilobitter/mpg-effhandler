@@ -7,6 +7,7 @@ import qualified Graphics.UI.Threepenny as UI
 import Graphics.UI.Threepenny.Core
 import Control.Concurrent.MVar
 import Control.Concurrent
+import Web.Browser
 import API.APITypes
 
 -- web helper function
