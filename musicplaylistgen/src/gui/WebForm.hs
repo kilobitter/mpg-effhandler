@@ -15,7 +15,7 @@ getArtLimWeb :: IO (Artist, Limit)
 getArtLimWeb = do
   alpair <- newEmptyMVar
   forkIO $ callGUI alpair
-  openBrowser "http://localhost:10000"
+  openBrowser "http://localhost:8023"
   takeMVar alpair
 
 callGUI :: MVar (Artist, Limit) -> IO ()
@@ -43,8 +43,9 @@ mkForm :: String -> UI (Element, Element, Element, Element)
 mkForm title = do
     button <- UI.button #. "button" #+ [string title]
     artistI <- UI.input
+    limitPrompt <- UI.div #+ [string "Please enter the playlist length"]
     limitI <- UI.input
-    view   <- UI.p #+ [element artistI, element limitI, element button]
+    view   <- UI.p #+ [element artistI, element limitPrompt, element limitI, element button]
     return (button, artistI, limitI, view)
 
 mkWindow :: MVar (Artist, Limit) -> UI [Element]

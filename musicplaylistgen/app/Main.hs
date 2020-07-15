@@ -1,6 +1,7 @@
 module Main where
 
 import Lib
+import EffArtistScrobblesPlaylist
 
 main :: IO ()
-main = someFunc
+main = testH2 >>= putStrLn

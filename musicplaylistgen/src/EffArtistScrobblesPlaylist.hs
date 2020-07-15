@@ -5,7 +5,8 @@
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE TypeOperators #-}
 
-module EffArtistScrobblesPlaylist where
+module EffArtistScrobblesPlaylist 
+ (testH, testH2, testMock) where
 
 import API.LastAPIHandler
 import API.YTAPIHandler

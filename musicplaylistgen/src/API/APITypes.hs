@@ -117,7 +117,8 @@ newtype SPPlaylistId = SPPlaylistId {pl :: String}
 
 instance FromJSON SPTrackId where
     parseJSON = withObject "SPTrackId" $ \o -> do
-      [item] <- o .: "tracks"
+      tracks <- o .: "tracks"
+      [item] <- tracks .: "items"
       sid <- item .: "id"
       sname <- item .: "name"
       return (SPTrackId sname sid)

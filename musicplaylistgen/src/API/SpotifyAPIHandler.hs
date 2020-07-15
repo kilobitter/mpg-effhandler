@@ -51,7 +51,7 @@ spURLGen a sl = do
                 "?response_type=code" ++
                 "&client_id=" ++ spotifyCID ++
                 "&scope=playlist-modify-public" ++
-                "&redirect_uri=localhost:8999%2Fcallback")
+                "&redirect_uri=http://localhost:8999/callback")
     
     reqURI <- bracket (prepareSocket 8999) close
             (\sock -> do 
@@ -70,7 +70,7 @@ packStrBS :: String -> IB.ByteString
 packStrBS = encodeUtf8 . T.pack
 
 takeTokens :: OAuth2Result Errors OAuth2Token -> (AccessToken, Maybe RefreshToken)
-takeTokens (Left err) = (AccessToken "NaN", Just $ RefreshToken "NaN")
+takeTokens (Left err) = (AccessToken (T.pack $ show err), Just $ RefreshToken "NaN")
 takeTokens (Right token) = (accessToken token, refreshToken token)
 
 parseSpotifyRequest :: NS.Result (NB.Request a) -> SimpleQuery
@@ -83,6 +83,7 @@ generatePlaylist spAT art sl = do
   userId <- spotifyGetUser spAT
   playlistID <- spotifyCreatePlaylist spAT (fromJust userId) art
   let tracksURI = toSpotURIs sIDs
+  print tracksURI
   statusResponse <- addSongsToPL spAT (fromJust playlistID) tracksURI
   return $ "http://open.spotify.com/user/" ++ usid (fromJust userId) ++ "/playlist/" ++ pl (fromJust playlistID)
 
@@ -125,24 +126,30 @@ spotifyGetUser spAT = do
   reqURL <- parseUrlThrow "https://api.spotify.com/v1/me"
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(hAuthorization, bearerHeader spAT)]
+              requestHeaders = [(hAuthorization, bearerHeader spAT),(hContentType,"application/json")]
             }
   response <- httpLbs req man
   return (AE.decode (responseBody response) :: Maybe SPUserId)
 
 toSpotURIs :: [Maybe SPTrackId] -> String
+toSpotURIs [] = "emptylist"
+toSpotURIs [Nothing] = "somethingswrong"
+toSpotURIs (Nothing:t) = "somethingisverywrong"
 toSpotURIs [Just item] = "spotify:track:" ++ songId item
 toSpotURIs (Just h:t) = foldl (\x y -> (x ++ "," ++ y)) ("spotify:track:" ++ songId h) (map (("spotify:track:" ++) . songId . fromJust) t) 
 
 addSongsToPL :: AccessToken -> SPPlaylistId -> String -> IO Int
 addSongsToPL spAT plId trackString = do
   man <- newManager settings
+  print ("https://api.spotify.com/v1/playlists/" ++ pl plId ++ "/tracks?uris=" ++ E.encode trackString)
   reqURL <- parseUrlThrow ("https://api.spotify.com/v1/playlists/" ++ pl plId ++ "/tracks?uris=" ++ E.encode trackString)
   let req = reqURL
             { proxy = Just $ Proxy "localhost" 1234,
-              requestHeaders = [(hAuthorization, bearerHeader spAT)]
+              method = "POST",
+              requestHeaders = [(hAuthorization, bearerHeader spAT),(hContentType,"application/json"),(hAccept,"application/json")]
             }
   response <- httpLbs req man
+  print response
   return $ statusCode $ responseStatus response
 
 bearerHeader :: AccessToken -> IB.ByteString
