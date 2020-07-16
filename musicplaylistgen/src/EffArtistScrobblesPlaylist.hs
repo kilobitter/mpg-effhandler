@@ -25,6 +25,7 @@ import           Control.Monad.Trans hiding (liftIO)
 import           Control.Monad (join)
 import           Data.Function ((&))
 import           Control.Concurrent.MVar
+import           Web.Browser
 
 import           Control.Effects.Eff
 import           Control.Effects.IO
@@ -37,24 +38,32 @@ main = do
 
 
 runProgram :: (Member EffAPI r, Member EffPlaylist r, Member EffIO r) =>
-  Eff r String
+  Eff r ()
 runProgram = do
   (artist,limit) <- getArtLim
   playlist <- requestapi artist limit
-  genPlaylist artist playlist
+  pllink <- genPlaylist artist playlist
+  resultPL pllink
 
 
 data EffIO a 
   = ReqArtLim ((Artist, Limit) -> a) 
+  | PLResult (String -> a)
   deriving (Functor, Typeable) 
 
 getArtLim :: (Member EffIO r) => Eff r (Artist, Limit)
 getArtLim = effect $ \k -> inj $ ReqArtLim k
 
+resultPL :: (Member EffIO r) =>  String -> Eff r ()
+resultPL s = effect $ \k -> inj $ PLResult k
+
 cmdHandler :: (Member LiftIO r) => Handler EffIO r a a
 cmdHandler (Value a) = return a
 cmdHandler (Comp (ReqArtLim k)) = do
     x <- finish $ liftIO getArtLimIO
+    k x
+cmdHandler (Comp (PLResult s k)) = do
+    x <- finish $ liftIO $ putStrLn s
     k x
 
 webHandler :: (Member LiftIO r) => Handler EffIO r a a
@@ -62,11 +71,17 @@ webHandler (Value a) = return a
 webHandler (Comp (ReqArtLim k)) = do
     x <- finish $ liftIO getArtLimWeb
     k x
+webHandler (Comp (PLResult s k)) = do
+    x <- finish $ liftIO $ openBrowser s
+    k x
 
 noIOHandler :: (String, String) -> Handler EffIO r a a 
 noIOHandler _ (Value a) = return a
 noIOHandler (a,l) (Comp (ReqArtLim k)) = do
     x <- finish $ return $ runIdentity $ getArtLimMock a l
+    k x
+noIOHandler (Comp (PLResult s k)) = do
+    x <- finish $ liftIO $ putStrLn s
     k x
 
 

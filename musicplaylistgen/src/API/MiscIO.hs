@@ -35,7 +35,7 @@ printPlaylist _ (SongList []) = putStr ""
 printPlaylist artist (SongList (sph:spt)) = do
         putStrLn (artist ++ " - " ++ sname ++ " - " ++ "Plays:" ++ show splays) 
         printPlaylist artist (SongList spt)
-                where SongPlays sname splays = sph
+                where SongPlays sname splays sartist = sph
 
 
 printPlaylistC :: Country -> CSongList -> IO ()

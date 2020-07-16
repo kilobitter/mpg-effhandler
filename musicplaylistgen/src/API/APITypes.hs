@@ -21,7 +21,7 @@ import           Network.HTTP.Base
 
 -- LastFM-specific
 -- TopScrobbles
-data SongPlays =  SongPlays {name :: String, playcount :: Int} deriving Show
+data SongPlays =  SongPlays {name :: String, playcount :: Int, artist :: String} deriving Show
 newtype SongList = SongList {list :: [SongPlays] } deriving Show
 
 type Artist = String
@@ -38,7 +38,9 @@ instance FromJSON SongPlays where
         parseJSON = withObject "SongPlays" $ \o -> do
           nname <- o .: "name"
           nplaycount  <- o .: "playcount"
-          return $ SongPlays nname (read nplaycount :: Int)
+          artstruct <- o .: "artist"
+          artname <- artstruct .: "name"
+          return $ SongPlays nname (read nplaycount :: Int) artname
 
 -- TopGeo
 

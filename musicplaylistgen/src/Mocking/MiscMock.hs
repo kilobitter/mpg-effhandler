@@ -33,7 +33,7 @@ playlistToString _ (SongList []) = ""
 playlistToString artist (SongList (sph:spt)) = Identity
         (artist ++ " - " ++ sname ++ " - " ++ "Plays:" ++ show splays ++ "\n" ++
         runIdentity (playlistToString artist (SongList spt)))
-                where SongPlays sname splays = sph
+                where SongPlays sname splays artist = sph
 
 
 playlistToStringC :: Country -> CSongList -> Identity String
