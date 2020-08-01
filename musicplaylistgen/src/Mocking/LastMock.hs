@@ -18,5 +18,5 @@ requestMockC country lim
     | otherwise = error "Called with wrong arguments"
 
 generateSongList :: Artist -> Int -> [SongPlays]
-generateSongList a 0 = [SongPlays "last one" 0]
-generateSongList a l = SongPlays (replicate l 'a') l : generateSongList a (l - 1)
+generateSongList a 0 = [SongPlays "last one" 0 a]
+generateSongList a l = SongPlays (replicate l 'a') l a : generateSongList a (l - 1)

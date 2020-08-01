@@ -32,11 +32,9 @@ import           Control.Effects.IO
 import           Control.Effects.State
 
 main :: IO ()
-main = do
-  sth <- testH
-  putStrLn sth
+main = testH
 
-
+-- Runs the program, contains the abstract operations
 runProgram :: (Member EffAPI r, Member EffPlaylist r, Member EffIO r) =>
   Eff r ()
 runProgram = do
@@ -46,17 +44,21 @@ runProgram = do
   resultPL pllink
 
 
+--Effect class containing user-interaction related effects
 data EffIO a 
   = ReqArtLim ((Artist, Limit) -> a) 
-  | PLResult (String -> a)
+  | PLResult String ( () -> a)
   deriving (Functor, Typeable) 
 
+--Getting user input
 getArtLim :: (Member EffIO r) => Eff r (Artist, Limit)
 getArtLim = effect $ \k -> inj $ ReqArtLim k
 
+--Returning the end result to the user
 resultPL :: (Member EffIO r) =>  String -> Eff r ()
-resultPL s = effect $ \k -> inj $ PLResult k
+resultPL s = effect $ \k -> inj $ PLResult s k
 
+--Through the command prompt
 cmdHandler :: (Member LiftIO r) => Handler EffIO r a a
 cmdHandler (Value a) = return a
 cmdHandler (Comp (ReqArtLim k)) = do
@@ -66,25 +68,28 @@ cmdHandler (Comp (PLResult s k)) = do
     x <- finish $ liftIO $ putStrLn s
     k x
 
+--Through the threepenny-GUI browser interface
 webHandler :: (Member LiftIO r) => Handler EffIO r a a
 webHandler (Value a) = return a
 webHandler (Comp (ReqArtLim k)) = do
     x <- finish $ liftIO getArtLimWeb
     k x
 webHandler (Comp (PLResult s k)) = do
-    x <- finish $ liftIO $ openBrowser s
+    x <- finish $ liftIO $ openBrowser s >>= (\b -> if b then putStrLn "success" else putStrLn "failure")
     k x
 
-noIOHandler :: (String, String) -> Handler EffIO r a a 
+--Have no user input, return to commandline
+noIOHandler :: (Member LiftIO r) => (String, String) -> Handler EffIO r a a 
 noIOHandler _ (Value a) = return a
 noIOHandler (a,l) (Comp (ReqArtLim k)) = do
     x <- finish $ return $ runIdentity $ getArtLimMock a l
     k x
-noIOHandler (Comp (PLResult s k)) = do
+noIOHandler _ (Comp (PLResult s k)) = do
     x <- finish $ liftIO $ putStrLn s
     k x
 
 
+--Define the request method
 data EffAPI a
   = ReqAPI Artist Limit (SongList -> a)
   deriving (Functor, Typeable)
@@ -143,7 +148,7 @@ mockPlayHandler (Comp (EffPlaylist a sl k)) = do
   x <- finish $ return $ runIdentity $ playlistToString a sl
   k x
 
-testH :: IO String
+testH :: IO ()
 testH = runProgram
   & handle cmdHandler
   & handle requestHandler
@@ -151,7 +156,7 @@ testH = runProgram
   & handle ioHandler
   & runPure
 
-testH2 :: IO String
+testH2 :: IO ()
 testH2 = runProgram
   & handle webHandler
   & handle requestHandler
@@ -159,9 +164,10 @@ testH2 = runProgram
   & handle ioHandler
   & runPure
 
-testMock :: (String, String) -> String
+testMock :: (String, String) -> IO ()
 testMock al = runProgram
   & handle (noIOHandler al)
   & handle mockHandler
-  & handle mockPlayHandler
+  & handle spPlayHandler
+  & handle ioHandler
   & runPure

@@ -32,6 +32,5 @@ import           MArtistScrobblesPlaylist as T
 main = defaultMain [
        bgroup "eff" [ bench "10" $ whnf M.mockRun
                     , bench "35" $ whnf testMock
-                    , bench "37" $ whnf fib 37
                     ]
                    ]
