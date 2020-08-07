@@ -5,9 +5,15 @@ module Mocking.MiscMock where
 
 import API.APITypes
 import Data.Functor.Identity
+import Control.Monad.State.Lazy
+
+type AppState = ((String, String), String)
 
 getArtLimMock :: String -> String -> Identity (Artist, Limit)
 getArtLimMock sa sl = Identity (sa, sl)
+
+getArtLimMockState :: State AppState (String, String)
+getArtLimMockState = fst <$> get
 
 getArtistMock :: String -> Identity Artist
 getArtistMock = Identity

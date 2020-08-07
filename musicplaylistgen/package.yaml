@@ -25,6 +25,7 @@ dependencies:
 - hoauth2
 - network
 - uri-bytestring
+- lens
 
 library:
   source-dirs: src

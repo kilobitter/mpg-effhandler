@@ -34,7 +34,7 @@ library
       EffArtistScrobblesPlaylist
       EffCountryScrobblesPlaylist
       -- MArtistConcertPlaylist
-      -- MArtistScrobblesPlaylist
+      MArtistScrobblesPlaylist
       -- MCountryScrobblesPlaylist
       Lib
   other-modules:
@@ -80,7 +80,8 @@ library
       hoauth2,
       criterion,
       uri-bytestring,
-      uri-encode
+      uri-encode,
+      lens
 
   default-language: Haskell2010
 

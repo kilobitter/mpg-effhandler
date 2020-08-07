@@ -134,7 +134,7 @@ ytPlayHandler :: (Member LiftIO r) => Handler EffPlaylist r a a
 ytPlayHandler (Value a) = return a
 ytPlayHandler (Comp (EffPlaylist a sl k)) = do
   x <- finish $ liftIO $ ytURLGen a sl
-  k x 
+  k x
 
 spPlayHandler :: (Member LiftIO r) => Handler EffPlaylist r a a
 spPlayHandler (Value a) = return a
@@ -168,6 +168,6 @@ testMock :: (String, String) -> IO ()
 testMock al = runProgram
   & handle (noIOHandler al)
   & handle mockHandler
-  & handle spPlayHandler
+  & handle mockPlayHandler
   & handle ioHandler
   & runPure
